@@ -16,4 +16,5 @@
     		sudo systemctl stop xmrig.service
     		sudo systemctl stop xmrig_light.service
 #Shutdown
+sleep 10
 sudo shutdown
