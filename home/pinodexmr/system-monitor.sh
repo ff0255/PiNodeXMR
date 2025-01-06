@@ -17,4 +17,6 @@
 	echo -n " P2Pool Server:" && sudo systemctl status p2pool.service | sed -n '3'p | cut -c13-;
 	echo -n "    Monero-LWS:" && sudo systemctl status monero-lws.service | sed -n '3'p | cut -c13-;
 	echo -n "   Atomic Swap:" && sudo systemctl status atomic-swap.service | sed -n '3'p | cut -c13-;
+	echo -n "   Xmrig miner:" && sudo systemctl status xmrig.service | sed -n '3'p | cut -c13-;
+	echo -n "Xmrig light miner:" && sudo systemctl status xmrig_light.service | sed -n '3'p | cut -c13-;
 	) > /var/www/html/iamrunning_version.txt
