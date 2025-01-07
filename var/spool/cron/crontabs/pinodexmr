@@ -33,6 +33,6 @@
 0 */4 * * * /home/pinodexmr/printPl.sh
 */5 * * * * /home/pinodexmr/free-h.sh
 */5 * * * * /home/pinodexmr/system-monitor.sh
-* 12 * * 7 /home/pinodexmr/weekly-log-clean.sh
+#* 12 * * 7 /home/pinodexmr/weekly-log-clean.sh
 #0 9 * * * /home/pinodexmr/xmrig/startxmriglight.sh
 #0 21 * * * /home/pinodexmr/xmrig/startxmrig.sh
