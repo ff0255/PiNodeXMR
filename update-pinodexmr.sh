@@ -64,7 +64,7 @@ sleep 3
 ##Replace file /etc/sudoers to set global sudo permissions/rules (required to add  new permissions to www-data user for interface buttons)
 echo -e "\e[32mDownload and replace /etc/sudoers file\e[0m"
 sleep 3
-wget https://raw.githubusercontent.com/shermand100/PiNodeXMR/master/etc/sudoers -O /home/pinodexmr/sudoers
+wget https://raw.githubusercontent.com/ff0255/PiNodeXMR/master/etc/sudoers -O /home/pinodexmr/sudoers
 sudo chmod 0440 /home/pinodexmr/sudoers
 sudo chown root /home/pinodexmr/sudoers
 sudo mv /home/pinodexmr/sudoers /etc/sudoers
@@ -78,7 +78,7 @@ sleep 3
 	echo "Clone PiNode-XMR to device from git" 2>&1 | tee -a /home/pinodexmr/debug.log
 echo -e "\e[32mDownloading PiNode-XMR files\e[0m"
 sleep 3
-git clone --single-branch https://github.com/shermand100/PiNodeXMR.git 2>&1 | tee -a /home/pinodexmr/debug.log
+git clone --single-branch https://github.com/ff0255/PiNodeXMR.git 2>&1 | tee -a /home/pinodexmr/debug.log
 
 				#Backup User values
 						echo "Backup variables" >>/home/pinodexmr/debug.log
@@ -320,7 +320,7 @@ git clone --single-branch https://github.com/shermand100/PiNodeXMR.git 2>&1 | te
 						echo "Update torrc settings - if installed" >>/home/pinodexmr/debug.log
 					echo -e "\e[32mUpdate of tor hidden service settings - If you have not installed tor this process will fail - this is expected\e[0m"
 					sleep 6
-					sudo wget https://raw.githubusercontent.com/shermand100/PiNodeXMR/master/etc/tor/torrc -O /etc/tor/torrc 2> >(tee -a /home/pinodexmr/debug.log >&2)
+					sudo wget https://raw.githubusercontent.com/ff0255/PiNodeXMR/master/etc/tor/torrc -O /etc/tor/torrc 2> >(tee -a /home/pinodexmr/debug.log >&2)
 					echo -e "\e[32mApplying Settings...\e[0m"
 					sleep 3
 					sudo chmod 644 /etc/tor/torrc 2> >(tee -a /home/pinodexmr/debug.log >&2)
@@ -354,7 +354,7 @@ git clone --single-branch https://github.com/shermand100/PiNodeXMR.git 2>&1 | te
 
 				#Update system version number to new one installed
 				echo "Update PiNodeXMR version number" >>/home/pinodexmr/debug.log
-					wget https://raw.githubusercontent.com/shermand100/PiNodeXMR/master/new-ver-pi.sh -O /home/pinodexmr/new-ver-pi.sh 2> >(tee -a /home/pinodexmr/debug.log >&2)
+					wget https://raw.githubusercontent.com/ff0255/PiNodeXMR/master/new-ver-pi.sh -O /home/pinodexmr/new-ver-pi.sh 2> >(tee -a /home/pinodexmr/debug.log >&2)
 					chmod 755 /home/pinodexmr/new-ver-pi.sh 2> >(tee -a /home/pinodexmr/debug.log >&2)
 					. /home/pinodexmr/new-ver-pi.sh 2> >(tee -a /home/pinodexmr/debug.log >&2)
 					echo -e "\e[32mUpdate system version number\e[0m"
