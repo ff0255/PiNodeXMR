@@ -204,3 +204,7 @@ HiddenServicePort 18081 127.0.0.1:18081
 ## address manually to your friends, uncomment this line:
 #PublishServerDescriptor 0
 
+## custom opts for disk and network
+AvoidDiskWrites 1
+BandwidthBurst 100 MBits
+BandwidthRate 10 MBits
