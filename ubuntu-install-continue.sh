@@ -3,7 +3,7 @@
 ##Open Sources:
 # Monero github https://github.com/moneroexamples/monero-compilation/blob/master/README.md
 # Monero Blockchain Explorer https://github.com/moneroexamples/onion-monero-blockchain-explorer
-# PiNode-XMR scripts and custom files at my repo https://github.com/shermand100/PiNodeXMR
+# PiNode-XMR scripts and custom files at my repo https://github.com/ff0255/PiNodeXMR
 # PiVPN - OpenVPN server setup https://github.com/pivpn/pivpn
 # Atomic Swaps - https://github.com/AthanorLabs/atomic-swap
 # P2Pool - https://github.com/SChernykh/p2pool
@@ -143,7 +143,7 @@ sleep 3
 	echo "Clone PiNode-XMR to device from git" 2>&1 | tee -a /home/pinodexmr/debug.log
 echo -e "\e[32mDownloading PiNode-XMR files\e[0m"
 sleep 3
-git clone --single-branch https://github.com/shermand100/PiNodeXMR.git 2>&1 | tee -a /home/pinodexmr/debug.log
+git clone --single-branch https://github.com/ff0255/PiNodeXMR.git 2>&1 | tee -a /home/pinodexmr/debug.log
 
 
 ##Configure ssh security. Allows only user 'pinodexmr'. Also 'root' login disabled via ssh, restarts config to make changes
@@ -225,7 +225,7 @@ then
 #ubuntu /dev/null odd requiremnt to set permissions
 sudo chmod 666 /dev/null
 sleep 3
-wget -q https://raw.githubusercontent.com/shermand100/PiNodeXMR/master/release.sh -O /home/pinodexmr/release.sh
+wget -q https://raw.githubusercontent.com/ff0255/PiNodeXMR/master/release.sh -O /home/pinodexmr/release.sh
 chmod 755 /home/pinodexmr/release.sh
 . /home/pinodexmr/release.sh
 
@@ -432,7 +432,7 @@ sleep 3
 sudo rm -r /home/pinodexmr/PiNodeXMR/ 2>&1 | tee -a /home/pinodexmr/debug.log
 
 ##Change log in menu to 'main'
-wget -O ~/.profile https://raw.githubusercontent.com/shermand100/PiNodeXMR/master/home/pinodexmr/.profile 2>&1 | tee -a /home/pinodexmr/debug.log
+wget -O ~/.profile https://raw.githubusercontent.com/ff0255/PiNodeXMR/master/home/pinodexmr/.profile 2>&1 | tee -a /home/pinodexmr/debug.log
 
 #Write value of LIGHTMODE variable
 	echo "#!/bin/sh
