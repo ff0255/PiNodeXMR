@@ -1,7 +1,10 @@
 /home/pinodexmr/p2pool/build/p2pool.log {
-        su pinodexmr pinodexmr
-        rotate 0
-        size 2M
-        nocompress
+        rotate 5
+        daily
         missingok
+        delaycompress
+        nocreate
+        postrotate
+           /usr/bin/killall -USR1 p2pool
+        endscript
 }
