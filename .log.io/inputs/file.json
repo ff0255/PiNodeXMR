@@ -38,6 +38,13 @@
       "config": {
         "path": "/home/pinodexmr/onion-monero-blockchain-explorer/explorer.log"
       }
+    },
+   {
+      "source": "Xmrig_miner",
+      "stream": "Xmrig_miner_log",
+      "config": {
+        "path": "/var/log/xmrig.log"
+      }
     }
   ]
 }
