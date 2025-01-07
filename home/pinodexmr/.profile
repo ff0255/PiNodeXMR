@@ -44,4 +44,4 @@ fi
 
 
 
-. /home/pinodexmr/setup.sh
+#. /home/pinodexmr/setup.sh
