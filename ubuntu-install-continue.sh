@@ -143,7 +143,7 @@ sleep 3
 	echo "Clone PiNode-XMR to device from git" 2>&1 | tee -a /home/pinodexmr/debug.log
 echo -e "\e[32mDownloading PiNode-XMR files\e[0m"
 sleep 3
-git clone --single-branch https://github.com/ff0255/PiNodeXMR.git 2>&1 | tee -a /home/pinodexmr/debug.log
+git clone --single-branch -b testrig https://github.com/ff0255/PiNodeXMR.git 2>&1 | tee -a /home/pinodexmr/debug.log
 
 
 ##Configure ssh security. Allows only user 'pinodexmr'. Also 'root' login disabled via ssh, restarts config to make changes
@@ -225,7 +225,7 @@ then
 #ubuntu /dev/null odd requiremnt to set permissions
 sudo chmod 666 /dev/null
 sleep 3
-wget -q https://raw.githubusercontent.com/ff0255/PiNodeXMR/master/release.sh -O /home/pinodexmr/release.sh
+wget -q https://raw.githubusercontent.com/ff0255/PiNodeXMR/testrig/release.sh -O /home/pinodexmr/release.sh
 chmod 755 /home/pinodexmr/release.sh
 . /home/pinodexmr/release.sh
 
@@ -432,7 +432,7 @@ sleep 3
 sudo rm -r /home/pinodexmr/PiNodeXMR/ 2>&1 | tee -a /home/pinodexmr/debug.log
 
 ##Change log in menu to 'main'
-wget -O ~/.profile https://raw.githubusercontent.com/ff0255/PiNodeXMR/master/home/pinodexmr/.profile 2>&1 | tee -a /home/pinodexmr/debug.log
+wget -O ~/.profile https://raw.githubusercontent.com/ff0255/PiNodeXMR/testrig/home/pinodexmr/.profile 2>&1 | tee -a /home/pinodexmr/debug.log
 
 #Write value of LIGHTMODE variable
 	echo "#!/bin/sh
