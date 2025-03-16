@@ -12,7 +12,9 @@
 		sudo systemctl stop moneroTorPrivate.service
 		sudo systemctl stop moneroTorPublic.service
 		sudo systemctl stop p2pool.service
-		sudo systemctl stop noip.service				
+		sudo systemctl stop noip.service
+  		sudo systemctl stop xmrig.service
+    		sudo systemctl stop xmrig_light.service
 #Shutdown
 sleep 10
 sudo reboot

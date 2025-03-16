@@ -1,0 +1,20 @@
+[Unit]
+Description=Xmrig miner service (half load)
+After=network-online.target systemd-modules-load.service p2pool.service
+Wants=network-online.target systemd-modules-load.service p2pool.service
+
+[Service]
+User=root
+Group=pinodexmr
+ExecStart=/home/pinodexmr/xmrig/xmrig/xmrig -o 127.0.0.1:3333 --randomx-1gb-pages --print-time=180 --health-print-time=120 --log-file=/var/log/xmrig.log --threads=6
+WorkingDirectory=/home/pinodexmr/xmrig/xmrig
+SyslogIdentifier=xmrig
+StandardOutput=null
+StandardError=journal
+TimeoutStartSec=30s
+TimeoutStopSec=15s
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target
