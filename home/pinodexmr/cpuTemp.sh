@@ -1,4 +1,5 @@
 #!/bin/sh
 #CPU temp Status
+#modded by ff for k10temp
 
-{ sudo  cat /sys/devices/virtual/thermal/thermal_zone0/temp | awk '{ print ($1 / 1000) "°C" }' & echo "Updates every 60 seconds" & date; } > /var/www/html/temp.txt
+{ sensors k10temp-pci-00c3 & echo "Updates every 60 seconds" & date; } > /var/www/html/temp.txt

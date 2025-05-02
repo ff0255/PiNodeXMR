@@ -10,6 +10,7 @@ echo "
 ####################
 " 2>&1 | tee -a /home/pinodexmr/debug.log
 
+
 #Load boot status - condition the node was last run
 . /home/pinodexmr/bootstatus.sh
 #Import Variable: Light-mode true/false

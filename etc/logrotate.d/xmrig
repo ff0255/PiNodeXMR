@@ -1,0 +1,12 @@
+/var/log/xmrig.log
+{
+        rotate 4
+        daily
+        missingok
+        notifempty
+        compress
+        delaycompress
+        postrotate
+         systemctl restart xmrig.service
+        endscript
+}
